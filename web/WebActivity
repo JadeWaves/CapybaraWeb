@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple website created with HTML5.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About Page</a></li>
+            <li><a href="contact.html">Contact Page</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I am learning how to create websites using HTML5. This page shows how to use elements, links, images, and videos.</p>
+        </section>
+
+        <section>
+            <h2>Sample Image</h2>
+            <img src="photos/1.png" alt="Sam" width="400">
+        </section>
+
+        <section>
+            <h2>Sample Video</h2>
+            <video width="600" height="340" controls autoplay>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sam Website | Made with HTML5</p>
+    </footer>
+</body>
+</html>
