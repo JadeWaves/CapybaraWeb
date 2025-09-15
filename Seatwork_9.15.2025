@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Button Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .example {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Button Examples</h1>
+
+  <!-- Example 1 -->
+  <div class="example">
+    <h3>1. Change Text</h3>
+    <p id="demo">Hello!</p>
+    <button onclick="changeText()">Click Me</button>
+  </div>
+
+  <!-- Example 2 -->
+  <div class="example">
+    <h3>2. Show Alert</h3>
+    <button onclick="showMessage()">Click for Alert</button>
+  </div>
+
+  <!-- Example 3 -->
+  <div class="example">
+    <h3>3. Change Background Color</h3>
+    <button onclick="changeColor()">Change Background</button>
+  </div>
+
+  <!-- Example 4 -->
+  <div class="example">
+    <h3>4. Choose from Dropdown</h3>
+    <select id="userChoice" onchange="displayChoice()">
+      <option value="">-- Select an option --</option>
+      <option value="Lingling Kwong">Lingling Kwong</option>
+      <option value="Orm Kornnaphat">Orm Kornnaphat</option>
+      <option value="Milk Pansa">Milk Pansa</option>
+    </select>
+    <p id="output"></p>
+  </div>
+
+  <!-- Example 5 -->
+  <div class="example">
+    <h3>5. Go to Spotify (Carl Timbol's Page)</h3>
+    <button onclick="goToSpotify()">Open Spotify Artist</button>
+  </div>
+
+  <script>
+    // Example 1
+    function changeText() {
+      document.getElementById("demo").innerText = "Sawatdi Kha, Khun Lor Khun Suay!";
+    }
+
+    // Example 2
+    function showMessage() {
+      alert("Alert! Alert! Alert! Alert! lol");
+    }
+
+    // Example 3 
+    function changeColor() {
+      document.body.style.backgroundColor =
+        document.body.style.backgroundColor === "brown" ? "white" : "brown";
+    }
+
+    // Example 4 
+    function displayChoice() {
+      let choice = document.getElementById("userChoice").value;
+      if (choice) {
+        document.getElementById("output").innerText = "You selected: " + choice;
+      } else {
+        document.getElementById("output").innerText = "";
+      }
+    }
+
+    // Example 5 (Go to Spotify Artist Page)
+    function goToSpotify() {
+      window.open("https://open.spotify.com/artist/7bvY7fKd6sKUgjSShq0Hit", "_blank");
+    }
+  </script>
+</body>
+</html>
