@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capybara Sample Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <h2 class="logo">Capybara</h2>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#photos">Photos</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Capybara World</h1>
+      <p>The largest, friendliest rodent on Earth 🐾</p>
+      <a href="#photos" class="btn">Explore Photos</a>
+      <button id="showFactsBtn">Show Capybara Facts</button>
+      <div id="factsDisplay"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="photos">
+      <h2>Capybara Photos</h2>
+      <div class="photo-container">
+        <img src="bara.jpg" alt="Capybara resting">
+        <img src="caaapy.jpg" alt="Capybara in nature">
+        <img src="pexels-rutpratheep-6359551.jpg" alt="Capybara sitting">
+        <img src="pexels-rutpratheep-6477262.jpg" alt="Capybara near water">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Capybara in Action</h2>
+      <video controls>
+        <source src="capyyy.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Capybara | Made with HTML5</p>
+  </footer>
+
+  <script>
+    // Variables
+    let userName = prompt("Hey there! What's your name?");
+    let capybaraCount = 4;
+
+    // Operators
+    let greeting = "Hello, " + userName + "! Welcome to Capybara World. 🐾";
+
+    // Conditional Statement
+    if (userName.length > 0) {
+      alert(greeting);
+    } else {
+      alert("Hello, guest! 🐾");
+    }
+
+    function showCapybaraFacts() {
+      // Object
+      let capybara = {
+        species: "Hydrochoerus hydrochaeris",
+        habitat: "Near rivers and lakes",
+        friendly: true,
+        funFact: "Capybaras love to chill with other animals!"
+      };
+
+      let factsHTML = `
+        <h3>🐾 Capybara Facts</h3>
+        <p><strong>Species:</strong> ${capybara.species}</p>
+        <p><strong>Habitat:</strong> ${capybara.habitat}</p>
+        <p><strong>Are they friendly?</strong> ${capybara.friendly ? "Yes!" : "Not really"}</p>
+        <p><strong>Fun Fact:</strong> ${capybara.funFact}</p>
+      `;
+
+      document.getElementById("factsDisplay").innerHTML = factsHTML;
+    }
+
+    document.getElementById('showFactsBtn').addEventListener('click', showCapybaraFacts);
+
+    // Array and Loop
+    let PNames = [
+      "bara.jpg",
+      "caaapy.jpg",
+      "pexels-rutpratheep-6359551.jpg",
+      "pexels-rutpratheep-6477262.jpg"
+    ];
+
+    console.log("📸 Capybara Photo Gallery:");
+    for (let i = 0; i < PNames.length; i++) {
+      console.log((i + 1) + ". " + PNames[i]);
+    }
+  </script>
+</body>
+</html>
