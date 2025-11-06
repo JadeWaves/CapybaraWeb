@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Form Validation</h2>
+ 
+  <form id="myForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+ 
+    <label>Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+ 
+    <label>Age:</label><br>
+    <input type="number" id="age" name="age" min="1" required><br><br>
+ 
+    <input type="submit" value="Submit">
+  </form>
+ 
+  <h3>Form Output:</h3>
+  <div id="output"></div>
+ 
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+ 
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const age = document.getElementById("age").value;
+ 
+      if (!name || !email || !age) {
+        alert("Please fill in all fields.");
+        return;
+      }
+ 
+      document.getElementById("output").innerHTML = `
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Age:</b> ${age}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
