@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+
+<h1>Number Guessing Game</h1>
+<p>You have 5 attempts to guess the number!</p>
+
+<script>
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+let maxTries = 5;
+
+for (let i = 1; i <= maxTries; i++) {
+    
+    let guess = Number(prompt(`Attempt ${i} of 5: Guess a number between 1 and 100`));
+
+    if (isNaN(guess)) {
+        alert("That's not a valid number! Try again.");
+        i--;
+        continue;
+    }
+
+    if (guess === randomNumber) {
+        alert(`Correct! You guessed the number in ${i} tries!`);
+        console.log("The correct number was:", randomNumber);
+        break;
+    } else if (guess > randomNumber) {
+        alert("Too high!");
+    } else {
+        alert("Too low!");
+    }
+
+    if (i === maxTries) {
+        alert(`Out of tries! The number was ${randomNumber}.`);
+        console.log("Game over. The correct number was:", randomNumber);
+    }
+}
+</script>
+
+</body>
+</html>

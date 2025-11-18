@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Challenge</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 100px;
+            background-color: lightcoral;
+            border: 4px solid darkred;
+            padding: 0px;
+            margin: 20px;
+            text-align: center;
+            line-height: 100px;
+            font-family: Arial, sans-serif;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 120px;
+            background-color: lightgreen;
+            border: 2px dashed green;
+            padding: 15px;
+            margin: 25px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        .box3 {
+            width: 250px;
+            height: 80px;
+            background-color: lightblue;
+            border: 1px solid navy;
+            padding: 10px;
+            margin: 40px;
+            text-align: right;
+            line-height: 60px;
+            font-family: Arial, sans-serif;
+        }
+
+        .box4 {
+            width: 180px;
+            height: 150px;
+            background-color: khaki;
+            border: 3px dotted goldenrod;
+            padding: 20px;
+            margin: 30px;
+            text-align: center;
+            line-height: 110px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+    <div class="box4">Box 4</div>
+
+</body>
+</html>
